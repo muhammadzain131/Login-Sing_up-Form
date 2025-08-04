@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+	<link rel="stylesheet"  href="style.css">
+	<meta name="viewport" content="width=device-width,user-scalable=0" />
+	<!--gildasioabraaorespositorio!-->
+	<meta charset="utf-8">
+	<title>Layout Login</title>
+</head>
+
+<body>
+	<nav>
+		<div class="container" id="container_main">
+			<div id="tela_cadastro" class="screen display-none">
+				<div class="back_cadastro"></div>
+				<div class="cadastro">
+					<h1>Registration</h1>
+					<div class="social_media">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-twitter"></i></a>
+						<a href=""><i class="fab fa-google-plus"></i></a>
+					</div>
+					<div class="form_cadastro">
+						<form method="post">
+							<i class="fas fa-envelope"><input id="email" type="e-mail" name="e-mail" placeholder="E-mail"
+									required></i>
+							<i class="fas fa-lock"><input id="password" type="password" name="password" placeholder="Password"
+									required></i>
+							<i class="fas fa-lock"><input id="Confirm" type="password" name="password" placeholder="Confirm Password" required></i>
+							<input onclick="sub()" type="submit" name="confirmar" value="Sing_up">
+						</form>
+					</div>
+				</div>
+				<div class="cadasto_login_area ca2">
+					<div class="cadastro_login">
+						<h1> Login</h1>
+						<div class="button_login">
+							<button onclick="changeViewScreen()" id="button_login">Login</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="tela_login" class="screen animation_login">
+				<div class="login">
+					<div class="back_login"></div>
+					<h1>Login</h1>
+					<div class="social_media">
+						<a href=""><i class="fab fa-facebook"></i></a>
+						<a href=""><i class="fab fa-twitter"></i></a>
+						<a href=""><i class="fab fa-google-plus"></i></a>
+					</div>
+					<div class="form_login">
+						<form method="post">
+							<i class="fas fa-envelope"><input type="e-mail" name="e-mail" placeholder="E-mail"
+									required></i>
+							<i class="fas fa-lock"><input type="password" name="password" placeholder="Password"
+									required></i>
+							<input type="submit" name="confirmar" value="Login">
+						</form>
+					</div>
+				</div>
+				<div class="cadasto_login_area">
+					<div class="login_login">
+						<h1>Create Account</h1>
+						<div class="button_login">
+							<button onclick="changeViewScreen()">Registration</button>
+						</div>
+					</div>
+				</div>
+			</div>
+	</nav>
+    <script src="javascript.js"></script>
+
+		<script src="https://kit.fontawesome.com/5acb55238f.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

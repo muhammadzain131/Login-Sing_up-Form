@@ -1,0 +1,327 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  background: url(./images/1.jpg);
+  background-size: cover;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.container {
+  width: 65vw;
+  height: 87vh;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+  border-radius: 3%;
+  box-shadow: 0px 0px 50px #80808087;
+}
+
+/* Signup screen container */
+#tela_cadastro {
+  float: left;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  height: 87vh;
+  border-radius: 3%;
+}
+
+/* Animations */
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translate(5px, -25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+
+.cadastro {
+  float: left;
+  height: 87vh;
+  margin: 0;
+  width: 60%;
+  border-right: 5px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3% 0% 0% 3%;
+  animation: fade-down 0.3s;
+}
+
+.cadastro h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.3vw;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+form input {
+  margin-top: 10px;
+  padding: 15px;
+  padding-left: 47px;
+  width: 20vw;
+  border-radius: 20px;
+  border: none;
+  color: #434343;
+}
+
+form i {
+  font-size: 20px;
+  color: white;
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+form i::before {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1;
+  color: #7356cc;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+/* Submit button */
+form [type*="submit"] {
+  color: white;
+  padding: 10px;
+  width: 11vw;
+  font-size: 1.4vw;
+  font-weight: bold;
+  border: 1px solid;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background 0.4s;
+}
+
+form [type*="submit"]:hover {
+  background-color: white;
+  color: #7356cc;
+  border: 1px solid transparent;
+}
+
+/* Social media icons */
+.social_media {
+  justify-content: center;
+  display: flex;
+  margin: 10px 0;
+}
+
+.social_media i {
+  transition: 0.4s;
+  font-size: 2.3vw;
+  color: #fff;
+}
+
+.social_media a {
+  margin-right: 15px;
+}
+
+.social_media i:hover {
+  text-shadow: 0px 0px 10px white;
+}
+
+/* Right side login area on signup screen */
+.cadasto_login_area {
+  width: 40%;
+  height: 87vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 15% 0% 0% 50%;
+  background-color: white;
+  animation: fade-up 0.3s;
+}
+
+.ca2 {
+  border-radius: 0% 50% 15% 0%;
+}
+
+.cadastro_login h1 {
+  text-align: center;
+  color: #5f72bd;
+  font-size: 2.3vw;
+}
+
+.button_login button {
+  margin-top: 10px;
+  color: #7356cc;
+  padding: 10px;
+  width: 11vw;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4vw;
+  border: 1px solid #7356cc;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: white;
+  transition: background 0.4s;
+}
+
+.button_login button:hover {
+  background-color: #7356cc;
+  color: white;
+  border: 1px solid transparent;
+}
+
+/* Login screen container */
+#tela_login {
+  background-image: linear-gradient(to top, #5f72bd 0%, #9b23ea 100%);
+  position: absolute;
+  float: right;
+  height: 87vh;
+  width: 65vw;
+  z-index: 9;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 3%;
+}
+
+.login {
+  height: 87vh;
+  margin: 0;
+  width: 60%;
+  border-left: 5px solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-down 0.3s;
+}
+
+.login h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.3vw;
+}
+
+/* Login side “create account” */
+.login_login h1 {
+  text-align: center;
+  color: #5f72bd;
+  font-size: 2.3vw;
+}
+
+/* Animations classes */
+.animation_cadastro {
+  animation: an_cadastro 1.5s;
+}
+
+.animation_login {
+  animation: an_login 1.5s;
+}
+
+/* Responsive CSS */
+@media (max-width: 1024px) {
+  .container {
+    width: 85vw;
+  }
+
+  #tela_login {
+    width: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95vw;
+    height: 100vh;
+  }
+
+  body {
+    background: none;
+  }
+
+  #tela_login,
+  #tela_cadastro {
+    border: none;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  #tela_login {
+    height: 108vh;
+  }
+
+  .login,
+  .cadasto_login_area,
+  .cadastro {
+    height: auto;
+    border: none;
+  }
+
+  .login {
+    width: inherit;
+    padding: 10vw 0 0;
+  }
+
+  .login h1,
+  .login_login h1,
+  .cadastro h1,
+  .cadastro_login h1 {
+    font-size: 6vw;
+  }
+
+  form input {
+    width: 80vw;
+  }
+
+  form [type*="submit"],
+  .button_login button {
+    width: 60vw;
+  }
+
+  .button_login button {
+    font-size: 5vw;
+  }
+}
